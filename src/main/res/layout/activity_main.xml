@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- App Name Header -->
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="My Cafe"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Desserts Header -->
+    <TextView
+        android:id="@+id/header_desserts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Desserts"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Floating Action Button for Shopping Cart -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        app:srcCompat="@drawable/ic_shopping_cart_foreground"
+        android:contentDescription="@string/app_name" />
+
+    <!-- ImageView for Donut -->
+    <ImageView
+        android:id="@+id/image_donut"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/donut_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_desserts"
+        android:contentDescription="@string/donuts" />
+
+    <!-- TextView for Donut Description -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/donuts"
+        app:layout_constraintStart_toEndOf="@id/image_donut"
+        app:layout_constraintTop_toTopOf="@id/image_donut" />
+
+    <!-- ImageView for Ice Cream -->
+    <ImageView
+        android:id="@+id/image_ice_cream"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/icecream_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_donut"
+        android:contentDescription="@string/ice_cream_sandwiches" />
+
+    <!-- TextView for Ice Cream Description -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/ice_cream_sandwiches"
+        app:layout_constraintStart_toEndOf="@id/image_ice_cream"
+        app:layout_constraintTop_toTopOf="@id/image_ice_cream" />
+
+    <!-- ImageView for Froyo -->
+    <ImageView
+        android:id="@+id/image_froyo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/froyo_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_ice_cream"
+        android:contentDescription="@string/froyo" />
+
+    <!-- TextView for Froyo Description -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/froyo"
+        app:layout_constraintStart_toEndOf="@id/image_froyo"
+        app:layout_constraintTop_toTopOf="@id/image_froyo" />
+</androidx.constraintlayout.widget.ConstraintLayout>
